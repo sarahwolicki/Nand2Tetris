@@ -1,0 +1,25 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, ID 208925230, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 2 - Boolean Arithmetic
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+HalfAdder.hdl - gets two bits and outputs their sum and the carry value
+FullAdder.hdl - gets three bits and outputs their sum and the carry value
+Add16.hdl - adds two 16-bit binary numbers
+Inc16.hdl - increases a 16-bit binary number by 1
+ALU.hdl - Arithmetic Logic Unit. gets two 16-bit inputs, and 6 bits that represent the arithmetic action to be applied
+ShiftLeft.hdl - gets a 16-bit input and moves every bit one position to the left except the sign bit
+ShiftRight.hdl - gets a 16-bit input and moves every bit one position to the right, leaving the sign bit as it is
+Mul.hdl - multiplies two 16-bit binary numbers
+
+Remarks
+-------
+* 

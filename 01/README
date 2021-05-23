@@ -1,0 +1,32 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, ID 208925230, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 1 - Boolean Logic
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+Not.hdl - single-input Not gate, converts input from 1 to 0 and vice versa
+And.hdl - And gate, gets two inputs. outputs 1 if both inputs are 1, otherwise 0
+Or.hdl - Or gate, gets two inputs. outputs 1 if one or both inputs are 1, otherwise 0
+Xor.hdl - Exclusive Or gate, gets two inputs. outputs 1 iff one input is 1, otherwise 0
+Mux.hdl - Multiplexor gate, gets three inputs (a, b, sel). outputs a if sel=0 and b if sel=1
+DMux.hdl - Demultiplexor gate, gets two inputs (in, sel). outputs {in, 0} if sel=0, and {0, in} if sel=1
+Not16.hdl - 16-bit Not gate, applies Not gate to all bits of input bus
+And16.hdl - 16-bit And gate, gets two buses and applies And gate to the 16 corresponding pairs of bits
+Or16.hdl - 16-bit Or gate, gets two buses and applies Or gate to the 16 corresponding pairs of bits
+Mux16.hdl - 16-bit Multiplexor gate, applies binary Multiplexor logic to 16 bit buses
+Or8Way.hdl - 8-bit Or gate, outputs 1 if at least one of the 8 bits is 1, otherwise 0
+Mux4Way16.hdl - 4-way Multiplexor gate, gets 4 16-bit buses
+Mux8Way16.hdl - 8-way Multiplexor gate, gets 8 16-bit buses
+DMux4Way.hdl - 4-way Demultiplexor gate, gets inputs (in, sel[2]) and sets one of 4 outputs to in based on sel
+DMux8Way.hdl - 4-way Demultiplexor gate, gets inputs (in, sel[3]) and sets one of 8 outputs to in based on sel
+
+Remarks
+-------
+* 
