@@ -1,0 +1,24 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, ID 208925230, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 3 - Memory
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+Bit.hdl - 1-bit register
+Register.hdl - 16-bit register, comprised of 8 Bits
+RAM8.hdl - 8-register RAM
+RAM64.hdl - 64-register RAM, comprised of 8 RAM8s
+RAM512 - 512-register RAM, comprised of 8 RAM64s
+RAM4K - 4096-register RAM, comprised of 8 RAM512s
+RAM16K - 16384-register RAM, comprisedof 4 RAM4Ks
+
+Remarks
+-------
+* 
