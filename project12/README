@@ -1,0 +1,33 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 11 - The Operating System
+                           -------------------------------------
+  
+
+Submitted Files
+---------------
+README - This file.
+
+Array.jack - Handles construction and disposal of Array objects.
+
+Keyboard.jack - Reads input from the keyboard.
+
+Math.jack - Handles mathematical operations.
+
+Memory.jack - Allocates and recycles RAM segments for the computer's proccesses.
+
+Output.jack - Handles the displaying of text on the screen.
+
+Screen.jack - Handles the displaying of graphics on the screen.
+
+String.jack - Handles construction, disposal and editing of String objects.
+
+Sys.jack - Supports program execution.
+
+Remarks
+-------
+* 
