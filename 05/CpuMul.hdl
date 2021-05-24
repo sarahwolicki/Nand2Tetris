@@ -1,0 +1,66 @@
+/**
+* This chip is an extension of the book CPU by using the extended ALU.
+* More specificly if instruction[15]==0 or (instruction[14] and instruction[13] equals 1)
+* the CpuMul behave exactly as the book CPU.
+* While if it is C instruction and instruction[13] == 0 the output will be D*A/M 
+* (according to instruction[12]).
+* Moreover, if it is c instruction and instruction[14] == 0 it will behave as follows:
+*
+* instruction:  | 12 | 11 | 10 |
+* _____________________________
+* shift left D  | 0  | 1  | 1  |
+* shift left A  | 0  | 1  | 0  |
+* shift left M  | 1  | 1  | 0  |
+* shift right D | 0  | 0  | 1  |
+* shift right A | 0  | 0  | 0  |
+* shift right M | 1  | 0  | 0  |
+**/
+
+CHIP CpuMul{
+
+    IN  inM[16],         // M value input  (M = contents of RAM[A])
+        instruction[16], // Instruction for execution
+        reset;           // Signals whether to re-start the current
+                         // program (reset=1) or continue executing
+                         // the current program (reset=0).
+
+    OUT outM[16],        // M value output
+        writeM,          // Write into M? 
+        addressM[15],    // Address in data memory (of M)
+        pc[15];          // address of next instruction
+
+     PARTS:
+// A register
+    Not (in=instruction[15], out=Ainst);
+    Not (in=Ainst, out=Cinst);
+    And(a=Cinst, b=instruction[5], out=CtoA);
+    Or (a=Ainst, b=CtoA, out=loadA);
+    Mux16 (a=instruction, b=aluout, sel=CtoA, out=Ain);
+    ARegister (in=Ain, load=loadA, out=A, out[0..14]=addressM);
+
+    Mux16 (a=A, b=inM, sel=instruction[12], out=muxAM);
+    
+    And (a=Cinst, b=instruction[4], out=loadD);
+    DRegister (in=aluout, load=loadD, out=D);
+
+    ExtendAlu(x=D, y=muxAM, instruction=instruction[6..14], out=aluout, zr=zr, ng=ng);
+    Or16 (a=false, b=aluout, out=outM);
+
+
+// calculate if pc should load or not
+    Or (a=zr, b=ng, out=notpos);
+    Not (in=notpos, out=pos);
+    
+    And (a=instruction[0], b=pos, out=jpos);
+    And (a=instruction[1], b=zr, out=jzr);
+    And (a=instruction[2], b=ng, out=jng);
+    Or (a=jpos, b=jzr, out=jor);
+    Or (a=jng, b=jor, out=jump);
+
+    And (a=Cinst, b=jump, out=loadPC); //only load if C instruction
+    Not (in=loadPC, out=incPC);
+    PC (in=A, load=loadPC, inc=incPC, reset=reset, out[0..14]=pc);
+
+
+    And(a=Cinst, b=instruction[3], out=writeM);
+}

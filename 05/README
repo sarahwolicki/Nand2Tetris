@@ -1,0 +1,36 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 5 - Computer Architecture
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+
+Memory.hdl - controls the reading of and writing to all of our computer's memory,
+including RAM, the screen memory map, and the keyboard memory map.
+
+CPU.hdl - the central processing unit of our computer, consisting of an ALU, 
+two registers, and a program counter. at each tick tock the CPU gets an instruction
+and outputs the value resulting from the current instruction and the address of the
+next instruction. the CPU's execution of the program can be reset.
+
+Computer.hdl - the full Hack computer, consisting of RAM, ROM, and a CPU.
+begins execution of the program stored in the ROM when reset bit is set to 1
+
+ExtendAlu.hdl - an extension of the previously implemented ALU chip to add
+the multiplication and shift operations. implemented using an ALU chip and additional
+chips to calculate the new operations and using logic gates to output the correct output.
+
+CpuMul.hdl - an adaptation of the CPU to support multiplication and shift
+operations, implemented identically to the CPU except for the substitution
+of the ALU chip with the new ExtendAlu chip.
+
+Remarks
+-------
+* 
