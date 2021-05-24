@@ -1,0 +1,25 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 10 - Compiler I - Syntax Analysis
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+
+JackAnalyzer.py - main file of the program. for each jack file it utilizes JackTokenizer.py to create a tokenizer from the jack file, opens a new xml file, makes a CompilationEngine from the tokenizer and the xml file, and runs the CompilationEngine
+
+JackTokenizer.py - reads in a jack file and parses it to tokens
+
+CompilationEngine.py - recursively compiles a jack class by reading in tokens from a tokenizer and translating them into xml code written to an xml file
+
+Makefile, JackAnalyzer - to ensure executability of program
+
+Remarks
+-------
+* 
