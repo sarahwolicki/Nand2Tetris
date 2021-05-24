@@ -1,0 +1,23 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 6 - Assembler
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+
+Assembler.py - a python program that parses an assembly code file and translates
+each line of assembly language code to binary machine code. outputs file containing
+machine code.
+
+Makefile, Assembler - files to ensure executability of program
+
+Remarks
+-------
+* 
