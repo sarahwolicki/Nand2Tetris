@@ -1,0 +1,27 @@
+sarahwolicki
+===============================================================================
+Sarah Wolicki, sarah.wolicki@mail.huji.ac.il
+
+===============================================================================
+
+                           Project 6 - VM Translator
+                           ----------------------- 
+  
+
+Submitted Files
+---------------
+README - This file.
+
+VMTranslator.py - the main file of the program, handles reading in VM files and
+parsing them line by line to be translated. translates each line using functions defined
+in the additional program files and writes the translations to the output file.
+
+arithmetic.py - handles the translation of arithmetic and logic operations
+
+mem.py - handles the translation of push and pop operations
+
+Makefile, VMtranslator - to ensure executability of program
+
+Remarks
+-------
+* 
